@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.897);
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 6%;
+}
+
+header img {
+  margin: 10px 0;
+  width: 100px;
+}
+
+li,
+a {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: rgb(224, 21, 21);
+}
+
+.header11 {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(to top, #ffe60000, #000000cf, #000000dc), url(/resources/FondoSobreNosotros.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.textos-header {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.textos-header h1 {
+  margin: 1%;
+  font-size: 45px;
+  color: rgb(218, 0, 0);
+}
+
+.textos-header h2 {
+  margin: 1%;
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  max-width: 800px;
+}
+
+.textos-header button{
+  margin: 2%;
+}
+
+
+button {
+  background-color: rgba(0, 0, 0, 0.541);
+  border-radius: 22px;
+  border: 3px solid;
+  color: red;
+  width: auto;
+  height: auto;
+  padding: 10px 30px;
+  font-size: 20px;
+  transition: transform 0,2s ease;
+}
+
+button:hover {
+  transform: scale(1.18);
+  
+}
+
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.contenedor {
+  padding: 60px 0px;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.titulo {
+  color: rgb(255, 20, 20);
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5% 0;
+
+}
+
+.cards .card {
+  background: #e5ff00b0;
+  display: flex;
+  width: 36%;
+  height: 200px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+
+}
+
+.cards .card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid black;
+  border-radius: 50%;
+  display: block;
+}
+
+.cards .card>.contenido-texto-card {
+  width: 60%;
+  color: #fff;
+}
+
+.cards .card>.contenido-texto-card p {
+  font-weight: 30%;
+  padding-top: 15px;
+}
+
+.about-service .titulo {
+  margin: 5px;
+  color: #aa0600;
+
+}
+
+.about-service {
+  background: linear-gradient(to top, #000000a9, #000000a9, #000000a9), url(/resources/fondoabotme.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;  
+  padding-bottom: 50px;
+}
+
+
+
+.servicio-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicio-ind {
+  width: 28%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.servicio-ind h3 {
+  margin: 10px 0;
+  color: rgb(255, 255, 255);
+}
+
+.servicio-ind p {
+  font-weight: 300;
+  text-align: justify;
+}

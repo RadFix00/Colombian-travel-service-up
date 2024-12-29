@@ -1,0 +1,133 @@
+*{
+    font-family: 'Montserrat';
+}
+.pie-pagina {    
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 25px 0px 0 0;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 225px;
+    background: none;
+
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: rgb(255, 20, 20);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+}
+
+.pie-pagina .grupo-1 .red-social {
+    text-align: center;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-radius: 25px;
+    padding-left: 10px;
+    margin-top: 35px;
+    
+
+}
+
+.pie-pagina .grupo-1 .red-social img {
+    width: 50px;
+    margin: 20px 10px;
+     
+    
+    
+
+}
+
+.pie-pagina .grupo-1 .red-social img:hover {
+   
+    scale: 1.1;    
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    
+
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(.88);
+       
+    }        
+
+    50% {
+        transform: scale(1);
+        
+    }
+
+    100% {
+        transform: scale(.88);
+        
+    }
+
+}
+
+.pie-pagina .grupo-2 {
+    background-color: rgb(255, 255, 255);
+    padding: 15px 10px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .pie-pagina .grupo-1 .box figure img {
+        width: 165px;
+        background: none;
+        margin-bottom: -50px;
+    
+    }
+
+    .pie-pagina .grupo-1 .box h2 {
+        color: rgb(255, 57, 57);
+        margin-bottom: 35px;
+        font-size: 20px;
+    }
+
+
+}

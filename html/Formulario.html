@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <title></title>
+
+</head>
+
+
+
+<body>
+    <header class="header">
+        <img src="Icono.png" alt="iconoDeColombianTravelService">
+        <nav>
+            <ul class="nav__links">
+                <!-- <li><a href="">Promociones</a> </li>-->
+                <li><a href="colombia.t.html">Menú</a></li>
+                <li><a href="Formulario.html">Contactanos</a></li>
+                <li><a href="Sobre.n.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div class="container">
+            <div class="row">
+                <form id="form">
+                    <div class="form">
+                        <div class="titulo">
+                            <h2>Mandanos tus datos,</h2><br>
+                            <h2>nosotros te contactaremos.</h2>
+                        </div>
+                        <div class="grupo"><br>
+                            <label for="nombre">Seleccione el tipo de Visa: </label>
+                            <select class="select" name="Visastype" required>
+                                <option value=""></option>
+                                <option value="EstadosUnidos">Estados Unidos</option>
+                                <option value="Canada">Canadá</option>
+                                <option value="Australia">Australia</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="grupo">
+                            <label for="">Nombre Y Apellidos:</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="   Escriba su nombre" required />
+                            <br>
+                        </div>
+                        <div class="grupo">
+                            <label for="">Correo Electronico:</label>
+                            <input type="email" name="email" id="email" placeholder="   Escriba su email" required />
+                            <br>
+                        </div>
+                        <div class="grupo">
+                            <label for="">Número De Contacto:</label>
+                            <input type="number" name="numero" id="numero" placeholder="   Escriba su numero Celular"
+                                required />
+                            <br>
+                        </div>
+                        <div class="grupo">
+                            <input type="checkbox" name="tratamiento" >Mandame<a href="informacion.html"> información</a>
+                            <br>
+                        </div>
+
+                    </div>
+                    <button type="submit" id="button" value="Enviar Mensaje">Enviar Mensaje</button>
+
+                </form>
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                <script type="text/javascript">
+                    emailjs.init('PLv7PT8NxD6PNkkw7')
+                </script>
+            </div>
+        </div>
+
+    </main>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="">
+                        <img src="Icono.png" alt="iconoDeColombianTravelService">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Tratamiento de Datos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, sed?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, sed?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, sed?</p>
+            </div>
+            <div class="box">
+                <h2>Siguenos</h2>
+                <div class="red-social">
+                    <a href="https://m.facebook.com/people/Restaurante-como-en-casa-el-gusto-es-nuestro/100063279011666/" class=""><img
+                            src="facebook-png.png" alt="ImagenRedSocialDeFacebook"></a>
+                    <a href="https://www.instagram.com/colombiantravelserv/?hl=es-la" class=""><img
+                            src="instagram-png.png" alt="ImagenRedSocialDeInstagram"></a>
+                    <a href="https://api.whatsapp.com/send?phone=573153913715&text=¡Hola!,%20vi%20tus%20servicios%20necesito%20más%20información"
+                        class="ImagenRedSocialDeWhatsapp"><img src="whatsapp-png.png" alt=""></a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <a href="https://www.instagram.com/rad.fix/?hl=es-la"><b>Rad.Fix</b></a> - Todos los
+                Derechos Reservados</small>
+        </div>
+
+    </footer>
+</body>
+<script>
+    const btn = document.getElementById('button');
+
+    document.getElementById('form')
+        .addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_h02hbwo';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.value = 'Enviar Mensaje';
+                    alert('Mensaje Enviado Correctamente!');
+                }, (err) => {
+                    btn.value = 'Enviar mensaje';
+                    alert(JSON.stringify(err));
+                });
+        });</script>
+
+</html>
